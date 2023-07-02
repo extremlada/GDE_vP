@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GDE_vP", "GDE_vP\GDE_vP.csproj", "{B86C1306-8BB8-4ED8-A2A5-68DF9B870CB5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B86C1306-8BB8-4ED8-A2A5-68DF9B870CB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B86C1306-8BB8-4ED8-A2A5-68DF9B870CB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B86C1306-8BB8-4ED8-A2A5-68DF9B870CB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B86C1306-8BB8-4ED8-A2A5-68DF9B870CB5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E4A9AE92-2121-4C88-A863-54D2D1CB019A}
+	EndGlobalSection
+EndGlobal
