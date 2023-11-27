@@ -12,14 +12,6 @@ using MySql.Data.MySqlClient;
 
 namespace GDE_vP
 {
-    public partial class Form2 : Form
-    {
-        private MySqlConnection conn;
-        private string server;
-        private string database;
-        private string uid;
-        private string password;
-
         public Form2()
         {
             server = "localhost";
