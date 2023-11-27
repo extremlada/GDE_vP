@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,21 @@ using MySql.Data.MySqlClient;
 
 namespace GDE_vP
 {
+    public partial class Form2 : Form
+    {
+        public class LoginEventArgs : EventArgs
+        {
+            public string userName { get; set; }
+        }
+
+       
+        public event EventHandler<LoginEventArgs> LoginSuccesful;
+        private MySqlConnection conn;
+        private string server;
+        private string database;
+        private string uid;
+        private string password;
+
         public Form2()
         {
             server = "localhost";
@@ -146,17 +162,25 @@ namespace GDE_vP
             string base64String = Convert.ToBase64String(modifiedBytes);
 
             string passwd = base64String;
-            MessageBox.Show(passwd);
 
             if (IsLogin(username, passwd))
             {
                 MessageBox.Show($"Welcome {username}");
-                
+                this.Hide();
+                OnLoginSuccessful(username);
             }
             else
             {
                 MessageBox.Show($"Username or Password is incorrect!");
             }
+            
+            
+        }
+
+        protected virtual void OnLoginSuccessful(string username)
+        {
+            MessageBox.Show("this is getting invoked");
+            LoginSuccesful?.Invoke( this, new LoginEventArgs {userName = username} );
         }
         public bool register(string username, string passwd)
         {
